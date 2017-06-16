@@ -1,0 +1,10 @@
+# Virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Projects
+source /usr/local/bin/virtualenvwrapper.sh
+
+# Docker
+# eval $(docker-machine env default)
+
+# Install with: brew install archey
+archey -o

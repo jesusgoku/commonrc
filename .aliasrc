@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Symfony2
+alias appc='app/console'
+
+# Reload
+alias reload='source $HOME/.zshrc'
