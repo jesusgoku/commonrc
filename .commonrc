@@ -4,3 +4,4 @@ source ~/.commonrc/.pathrc
 source ~/.commonrc/.functionrc
 source ~/.commonrc/.aliasrc
 source ~/.commonrc/.extrarc
+source ~/.commonrc/.startrc

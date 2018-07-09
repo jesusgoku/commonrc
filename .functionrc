@@ -20,8 +20,47 @@ nx-dissite() {
 
 
 # gitignore.io
-gi() { curl -L -s https://www.gitignore.io/api/\$@ ;}
+gi() { curl -L -s "https://www.gitignore.io/api/$@"; }
 
 # transfer.sh
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
+
+# Install with: brew install fortune cowsay lolcat
+function fortune-es {
+    \fortune \
+    artesmarciales \
+    atletismo \
+    brucelee \
+    deportes \
+    gimnasio \
+    karate \
+    montanismo \
+    viajes
+    # amistad \
+    # arte \
+    # asimov \
+    # ciencia \
+    # deprimente \
+    # familia \
+    # famosos \
+    # filosofia \
+    # humanos \
+    # informatica \
+    # lao-tse \
+    # leydemurphy \
+    # libertad \
+    # nietzsche \
+    # pintadas \
+    # poder \
+    # proverbios \
+    # refranes \
+    # sabiduria \
+    # schopenhauer \
+    # sentimientos \
+    # varios \
+    # verdad \
+    # vida \
+}
+
+alias fortune='fortune-es | cowsay -f tux | lolcat'

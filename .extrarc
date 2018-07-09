@@ -1,10 +1,30 @@
 # Virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Projects
+# export VIRTUALENVWRAPPER_PYTHON=/usr/local/opt/python/libexec/bin/python
 source /usr/local/bin/virtualenvwrapper.sh
+
+# Android SDK
+export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Docker
 # eval $(docker-machine env default)
 
-# Install with: brew install archey
-archey -o
+export EDITOR=$(which vim)
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/jesusurrutia/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/jesusurrutia/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/jesusurrutia/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/jesusurrutia/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
+# added by travis gem
+[ -f /Users/jesusurrutia/.travis/travis.sh ] && source /Users/jesusurrutia/.travis/travis.sh
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8

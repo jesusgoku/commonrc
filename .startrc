@@ -1,0 +1,5 @@
+# Install with: brew install archey
+# archey -o
+
+figlet 'JesusGoku' | lolcat
+fortune
