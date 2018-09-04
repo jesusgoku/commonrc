@@ -16,5 +16,8 @@ export PATH="/usr/local/opt/gettext/bin:${PATH}"
 # Anaconda3
 export PATH=/usr/local/anaconda3/bin:"$PATH"
 
+# Dart
+export PATH="/usr/local/opt/dart@2/bin:$PATH"
+
 # Personal
 export PATH="${HOME}/.bin:${PATH}"
